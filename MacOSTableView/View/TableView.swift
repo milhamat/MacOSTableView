@@ -10,6 +10,12 @@ import SnapKit
 
 class TableView: UIView {
     
+    let firsTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        return tableView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -20,6 +26,12 @@ class TableView: UIView {
     }
     
     private func setupView() {
-        self.backgroundColor = .lightGray
+        self.backgroundColor = .white
+        
+        self.addSubview(firsTableView)
+        
+        self.firsTableView.snp.makeConstraints { (make) in
+            make.top.left.right.bottom.centerX.equalTo(self.safeAreaLayoutGuide)
+        }
     }
 }

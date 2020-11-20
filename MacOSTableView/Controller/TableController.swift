@@ -7,11 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TableController: UIViewController {
+    
+    private var tableView: TableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.tableView = TableView(frame: self.view.frame)
+        self.view = self.tableView
     }
 
 

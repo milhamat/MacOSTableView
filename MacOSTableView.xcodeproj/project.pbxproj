@@ -3,17 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		15D367FF7992156467D7E706 /* Pods_MacOSTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FD8B3C218138E23757E744 /* Pods_MacOSTableView.framework */; };
 		DA81436A2568017100E29089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8143692568017100E29089 /* AppDelegate.swift */; };
 		DA81436C2568017100E29089 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81436B2568017100E29089 /* SceneDelegate.swift */; };
-		DA81436E2568017100E29089 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81436D2568017100E29089 /* ViewController.swift */; };
+		DA81436E2568017100E29089 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81436D2568017100E29089 /* TableController.swift */; };
 		DA8143712568017100E29089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA81436F2568017100E29089 /* Main.storyboard */; };
 		DA8143732568017300E29089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8143722568017300E29089 /* Assets.xcassets */; };
 		DA8143762568017300E29089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8143742568017300E29089 /* LaunchScreen.storyboard */; };
+		DA814388256805DD00E29089 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA814387256805DD00E29089 /* TableView.swift */; };
+		DA81438B256805F000E29089 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81438A256805F000E29089 /* DetailView.swift */; };
+		DA81438E2568060500E29089 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81438D2568060500E29089 /* DetailController.swift */; };
+		DA8143922568064400E29089 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8143912568064400E29089 /* TableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +26,16 @@
 		DA8143662568017100E29089 /* MacOSTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacOSTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8143692568017100E29089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA81436B2568017100E29089 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DA81436D2568017100E29089 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA81436D2568017100E29089 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		DA8143702568017100E29089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA8143722568017300E29089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA8143752568017300E29089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8143772568017300E29089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA81437E2568017800E29089 /* MacOSTableView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOSTableView.entitlements; sourceTree = "<group>"; };
+		DA814387256805DD00E29089 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		DA81438A256805F000E29089 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		DA81438D2568060500E29089 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		DA8143912568064400E29089 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		EB0B31EE6BA064545561A1A7 /* Pods-MacOSTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOSTableView.debug.xcconfig"; path = "Target Support Files/Pods-MacOSTableView/Pods-MacOSTableView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +57,6 @@
 				EB0B31EE6BA064545561A1A7 /* Pods-MacOSTableView.debug.xcconfig */,
 				226F9738091D8BEA3959CC29 /* Pods-MacOSTableView.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -106,6 +113,8 @@
 		DA8143812568022E00E29089 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DA81436D2568017100E29089 /* TableController.swift */,
+				DA81438D2568060500E29089 /* DetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -113,9 +122,19 @@
 		DA8143822568023800E29089 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DA81436D2568017100E29089 /* ViewController.swift */,
+				DA814387256805DD00E29089 /* TableView.swift */,
+				DA81438A256805F000E29089 /* DetailView.swift */,
+				DA8143902568060900E29089 /* Cell */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DA8143902568060900E29089 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DA8143912568064400E29089 /* TableCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +251,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA81436E2568017100E29089 /* ViewController.swift in Sources */,
+				DA81436E2568017100E29089 /* TableController.swift in Sources */,
+				DA814388256805DD00E29089 /* TableView.swift in Sources */,
 				DA81436A2568017100E29089 /* AppDelegate.swift in Sources */,
+				DA8143922568064400E29089 /* TableCell.swift in Sources */,
+				DA81438B256805F000E29089 /* DetailView.swift in Sources */,
+				DA81438E2568060500E29089 /* DetailController.swift in Sources */,
 				DA81436C2568017100E29089 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

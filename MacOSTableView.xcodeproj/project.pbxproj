@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15D367FF7992156467D7E706 /* Pods_MacOSTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FD8B3C218138E23757E744 /* Pods_MacOSTableView.framework */; };
 		DA81436A2568017100E29089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8143692568017100E29089 /* AppDelegate.swift */; };
 		DA81436C2568017100E29089 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81436B2568017100E29089 /* SceneDelegate.swift */; };
 		DA81436E2568017100E29089 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81436D2568017100E29089 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		226F9738091D8BEA3959CC29 /* Pods-MacOSTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOSTableView.release.xcconfig"; path = "Target Support Files/Pods-MacOSTableView/Pods-MacOSTableView.release.xcconfig"; sourceTree = "<group>"; };
+		D6FD8B3C218138E23757E744 /* Pods_MacOSTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacOSTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8143662568017100E29089 /* MacOSTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacOSTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8143692568017100E29089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA81436B2568017100E29089 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,8 @@
 		DA8143722568017300E29089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA8143752568017300E29089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8143772568017300E29089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA81437E2568017800E29089 /* MacOSTableView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOSTableView.entitlements; sourceTree = "<group>"; };
+		EB0B31EE6BA064545561A1A7 /* Pods-MacOSTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOSTableView.debug.xcconfig"; path = "Target Support Files/Pods-MacOSTableView/Pods-MacOSTableView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D367FF7992156467D7E706 /* Pods_MacOSTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39608E8B2E4BEA262971C3FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB0B31EE6BA064545561A1A7 /* Pods-MacOSTableView.debug.xcconfig */,
+				226F9738091D8BEA3959CC29 /* Pods-MacOSTableView.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4F35FE3BC976F6026A0AB055 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6FD8B3C218138E23757E744 /* Pods_MacOSTableView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA81435D2568017100E29089 = {
 			isa = PBXGroup;
 			children = (
 				DA8143682568017100E29089 /* MacOSTableView */,
 				DA8143672568017100E29089 /* Products */,
+				39608E8B2E4BEA262971C3FB /* Pods */,
+				4F35FE3BC976F6026A0AB055 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +84,38 @@
 			children = (
 				DA8143692568017100E29089 /* AppDelegate.swift */,
 				DA81436B2568017100E29089 /* SceneDelegate.swift */,
-				DA81436D2568017100E29089 /* ViewController.swift */,
+				DA8143802568022000E29089 /* Model */,
+				DA8143822568023800E29089 /* View */,
+				DA8143812568022E00E29089 /* Controller */,
+				DA81437E2568017800E29089 /* MacOSTableView.entitlements */,
 				DA81436F2568017100E29089 /* Main.storyboard */,
 				DA8143722568017300E29089 /* Assets.xcassets */,
 				DA8143742568017300E29089 /* LaunchScreen.storyboard */,
 				DA8143772568017300E29089 /* Info.plist */,
 			);
 			path = MacOSTableView;
+			sourceTree = "<group>";
+		};
+		DA8143802568022000E29089 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA8143812568022E00E29089 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA8143822568023800E29089 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA81436D2568017100E29089 /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA81437A2568017300E29089 /* Build configuration list for PBXNativeTarget "MacOSTableView" */;
 			buildPhases = (
+				7B310CD506EAD444488F2833 /* [CP] Check Pods Manifest.lock */,
 				DA8143622568017100E29089 /* Sources */,
 				DA8143632568017100E29089 /* Frameworks */,
 				DA8143642568017100E29089 /* Resources */,
+				73833216B349240401C6C96F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +184,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		73833216B349240401C6C96F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MacOSTableView/Pods-MacOSTableView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MacOSTableView/Pods-MacOSTableView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MacOSTableView/Pods-MacOSTableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B310CD506EAD444488F2833 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MacOSTableView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA8143622568017100E29089 /* Sources */ = {
@@ -283,9 +378,11 @@
 		};
 		DA81437B2568017300E29089 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB0B31EE6BA064545561A1A7 /* Pods-MacOSTableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacOSTableView/MacOSTableView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4A4J3R44FB;
 				INFOPLIST_FILE = MacOSTableView/Info.plist;
@@ -295,6 +392,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Rexy.MacOSTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,9 +400,11 @@
 		};
 		DA81437C2568017300E29089 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 226F9738091D8BEA3959CC29 /* Pods-MacOSTableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacOSTableView/MacOSTableView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4A4J3R44FB;
 				INFOPLIST_FILE = MacOSTableView/Info.plist;
@@ -314,6 +414,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Rexy.MacOSTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

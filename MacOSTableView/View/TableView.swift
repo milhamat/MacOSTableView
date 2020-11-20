@@ -12,7 +12,7 @@ class TableView: UIView {
     
     let firsTableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(TableCell.self, forCellReuseIdentifier: "cell")// bawaan UITableViewCell
         return tableView
     }()
     
@@ -28,7 +28,7 @@ class TableView: UIView {
     private func setupView() {
         self.backgroundColor = .white
         
-        self.addSubview(firsTableView)
+        self.addSubview(self.firsTableView)
         
         self.firsTableView.snp.makeConstraints { (make) in
             make.top.left.right.bottom.centerX.equalTo(self.safeAreaLayoutGuide)
